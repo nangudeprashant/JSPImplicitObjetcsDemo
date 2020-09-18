@@ -5,12 +5,20 @@
 	id="WebApp_ID" version="3.1">
 	<display-name>JSPExceptionHandling</display-name>
 	<welcome-file-list>
-		<welcome-file>Index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 	<context-param>
 		<param-name>param1</param-name>
 		<param-value>BestJavaInstitute</param-value>
 	</context-param>
+	<servlet>
+		<servlet-name>MainServlet</servlet-name>
+		<servlet-class>javaLive.controller.MainServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MainServlet</servlet-name>
+		<url-pattern>/MainServlet</url-pattern>
+	</servlet-mapping>
 	<servlet>
 		<servlet-name>ImplicitObjetcs</servlet-name>
 		<jsp-file>/ImplicitObjetcs.jsp</jsp-file>

@@ -6,16 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>JavaLiveJSPImplicitObjectsDemo</title>
 </head>
+<h3>This program demonstrates how to use implicit objects of JSP</h3>
 <body>
-	<br/>
-	<br/><%=request.getAttribute("requestAttribute")%>
-	<br/><%=session.getAttribute("sessionAttribute")%>
-	<br/><%=application.getAttribute("applicationAttribute")%>
+	<%="Value of request attribute is "+request.getAttribute("requestAttribute")%>
+	<br/><%="Value of session attribute is "+session.getAttribute("sessionAttribute")%>
+	<br/><%="Value of application attribute is "+application.getAttribute("applicationAttribute")%>
 	<!--Look the difference above. We do not have explicitly initiate these objects as in case of
 	    previous servlet. Hence these are called as JSP's implicit objects.
 	    We can also use response object to redirect the request to particular page. -->
-	<br/><%=application.getInitParameter("param1")%>
-	<br/><%=config.getInitParameter("BestJavaInstitute")%>
+	<br/><%="Value of context paramater is "+application.getInitParameter("param1")%>
+	<br/><%="Value of jsp init paramater is "+config.getInitParameter("BestJavaInstitute")%>
 	<!-- In above code we have fetched context and JSP initializing parameters respectively
 	     with the help of JSP implicit objects. --> 
 </body>
